@@ -16,4 +16,21 @@ export default {
     path: path.resolve(import.meta.dirname, 'dist'),
     clean: true,
   },
+  module: {
+    rules: [
+       {
+          test: /\.css$/i,
+          use: ["style-loader", "css-loader"],
+       },
+
+       {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: "asset/resource",
+       },
+       {
+          test: /\.html$/i,
+          use: ["html-loader"],
+       },
+    ],
+ },
 };
