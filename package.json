@@ -6,7 +6,10 @@
   "scripts": {
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "git push subtree --prefix dist origin gh-pages"
+    "deploy": "git push subtree --prefix dist origin gh-pages",
+    "lint_main": "eslint ./src/script.js",
+    "lint_crt": "eslint .",
+    "format": "prettier . --write"
   },
   "keywords": [],
   "author": "",
